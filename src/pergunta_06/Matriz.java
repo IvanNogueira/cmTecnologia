@@ -35,7 +35,7 @@ public class Matriz {
         matriz.diagonalSecundaria();
         System.out.println(ANSI_RED+"Matriz com elementos da diagonal Principal inverta na diagonal Secundária ");
         matriz.imprimirMatriz();
-        matriz.comparação();
+        
 
 
     }//fechamento do pergunta 06
@@ -55,12 +55,6 @@ public class Matriz {
             }
         }
         
-        for(i = 0; i < 3; i++ ){
-            for(c = 0; c < 3;c++){
-                matriz2 [i][c] = (int)(Math.random()*2);
-                
-            }
-        }
        }
 
        //imprimir matriz
@@ -95,16 +89,5 @@ public class Matriz {
             System.out.println("");
         }
        
-        public void comparação(){
-            int contador=0;
-            System.out.print("comparação: ");
-           for( i  =  0; i < 3; i++ ){
-	for( c = 0; c < 3;c++){
-		if(matriz [i][c] == matriz2 [i] [c]){
-			contador++;
-		}// if 		
-        }//segundo for			
-}//primeiro for
-            System.out.println("contador: "+contador);
-        }
+    
 }
