@@ -32,8 +32,7 @@ public class Geometria {
 		cilindro1.calcularArea();
 		cilindro1.calcularVolume();
                 
-                Triangulo triangulo = new Triangulo();
-                triangulo.calculaArea();
+                
 		
 		System.out.println("\nFiguras bidimensionais\n");
 		System.out.println(quadrado1.toString());

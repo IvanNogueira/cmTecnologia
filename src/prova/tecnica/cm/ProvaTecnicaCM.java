@@ -33,6 +33,7 @@ public class ProvaTecnicaCM {
                     + "pela ausência do item removido. ");
             System.out.println("Opção 06 - Implemente uma função ou trecho de código que receba uma matriz quadrada "
                     + "e inverta os elementos da diagonal principal para a diagonal secundária");
+            System.out.println("Opção 07 - Pensamento para chegar na resolução da questão 07.");
             System.out.println("Opção 0: Para finalizar.");
             System.out.println("_____________________\n");
             System.out.print("digite a opção deseja:");
@@ -54,6 +55,9 @@ public class ProvaTecnicaCM {
                     break;
                 case 6:
                     pergunta_06.Matriz.main();
+                    break;
+                case 7:
+                    pergunta_07.padrao.main();
                     break;
 
                 default:

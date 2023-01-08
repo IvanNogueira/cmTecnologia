@@ -69,4 +69,14 @@ public class Triangulo implements Bidimensional {
 		return "-> " + this.getClass().getName() +  "\nLado: " + getLado() + "\nPerímetro: " 
 			+ getPerimetro() + "\nÁrea: " + getArea() + "\n";
 	}
+
+    @Override
+    public void calcularPerimetro() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void calcularArea() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
