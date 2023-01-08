@@ -7,6 +7,7 @@ package prova.tecnica.cm;
 
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 import pergunta_05.Pilha;
 
@@ -22,32 +23,44 @@ public class ProvaTecnicaCM {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
+        int numero ;
         
-        System.out.println("Opção 01 - Calcular a moda de um vetor de números inteiros (moda é o elemento que mais se repete). ");
-        System.out.println("Opção 02 - Escreva o algoritmo de ordenação de um vetor.");
-        System.out.println("Opção 05 -Utilizando somente operações de empilhar e desempilhar, escreva uma função ou trecho de código, que remova um item com valor X da pilha. Ao final da execução da função, a pilha deverá ser igual à original, exceto pela ausência do item removido. ");
-        System.out.print("digite a opção deseja:");
-        
-        int numero = entrada.nextInt();
+        do {
+            System.out.println("Opção 01 - Calcular a moda de um vetor de números inteiros (moda é o elemento que mais se repete). ");
+            System.out.println("Opção 02 - Escreva o algoritmo de ordenação de um vetor.");
+            System.out.println("Opção 05 -Utilizando somente operações de empilhar e desempilhar, escreva uma função ou trecho de código, "
+                    + "que remova um item com valor X da pilha. Ao final da execução da função, a pilha deverá ser igual à original, exceto "
+                    + "pela ausência do item removido. ");
+            System.out.println("Opção 06 - Implemente uma função ou trecho de código que receba uma matriz quadrada "
+                    + "e inverta os elementos da diagonal principal para a diagonal secundária");
+            System.out.println("Opção 0: Para finalizar.");
+            System.out.println("_____________________\n");
+            System.out.print("digite a opção deseja:");
 
-        switch (numero){
-            case 1:
-                pergunta_01();
-                break;
-            case 2:
-                pergunta_02();
-                break; 
-            case 3:
-                  
-            case 5:
-                pergunta_05.Pilha.main(args);
-                break; 
-            
-            default:
-            System.out.println("Número escolhido inexistente! Digite um número entre 1 a 7.");
-        }
-        System.out.println("\n");
-        
+            numero = entrada.nextInt();
+
+
+            switch (numero){
+                case 1:
+                    pergunta_01();
+                    break;
+                case 2:
+                    pergunta_02();
+                    break; 
+                case 3:
+
+                case 5:
+                    pergunta_05.Pilha.main(args);
+                    break;
+                case 6:
+                    pergunta_06.Matriz.main();
+                    break;
+
+                default:
+                System.out.println("Número escolhido inexistente! Digite um número entre 1 a 7.");
+            }
+            System.out.println("\n");
+        }while (numero != 0);
         
     }
     
@@ -110,10 +123,55 @@ public class ProvaTecnicaCM {
           
     }//fechamento do pergunta 02
     
-    public static void pergunta_03(){
+    public static void pergunta_06(){
+       int tamanho = 3;
+       int [][]matriz= new int[3][3];
+       int []aux = new int[3];
+       int i, c,t;
+       
+     
+        
+              
+       
+       //preencher a matriz gerando valores aleatorios
+        System.out.println("Gerado valores aleatorios da matriz.");
+       for(i = 0; i < tamanho; i++ ){
+           for(c = 0; c < tamanho;c++){
+               matriz [i][c] = (int)(Math.random()*10); ;
+           }
+       }
+         
+       //imprimir matriz
+       for(i = 0; i < tamanho; i++ ){
+           for(c = 0; c < tamanho;c++){
+               System.out.print(matriz [i][c] + " ");
+           }
+           System.out.println("");
+       }
+       //imprimir diagonal principal e armazenando valores no auxiliar
+        System.out.print("Diagonal Principal: ");
+        for( i=0;i < tamanho; i++){
+            System.out.print(matriz [i][i]+" ");
+            aux[i] = matriz [i][i];
+        }
+        System.out.println("");
+        
+        //imprimir diagonal secundaria
+        System.out.print("Diagonal Secundaria: ");
+        for( i=0;i < tamanho; i++){
+            System.out.print(matriz [i][tamanho -1 -i]+" ");
+            matriz [i][tamanho -1 -i] = aux[tamanho-1-i];
+        }
+        System.out.println("");
+        
+       // for( i=0;i < tamanho; i++){
+      //      matriz [][]
+      //  }
         
         
-    }//fechamento do pergunta 03
+    }//fechamento do pergunta 06
+    
+    
     
         
 }
