@@ -9,6 +9,7 @@ package prova.tecnica.cm;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import pergunta_03.Geometria;
 import pergunta_05.Pilha;
 
 /**
@@ -28,6 +29,7 @@ public class ProvaTecnicaCM {
         do {
             System.out.println("Opção 01 - Calcular a moda de um vetor de números inteiros (moda é o elemento que mais se repete). ");
             System.out.println("Opção 02 - Escreva o algoritmo de ordenação de um vetor.");
+            System.out.println("Opção 03 - Considere as figuras geométricas quadrado, triângulo equilátero e círculo.");
             System.out.println("Opção 05 -Utilizando somente operações de empilhar e desempilhar, escreva uma função ou trecho de código, "
                     + "que remova um item com valor X da pilha. Ao final da execução da função, a pilha deverá ser igual à original, exceto "
                     + "pela ausência do item removido. ");
@@ -49,6 +51,8 @@ public class ProvaTecnicaCM {
                     pergunta_02();
                     break; 
                 case 3:
+                        pergunta_03.Geometria.main(args);
+                        break; 
 
                 case 5:
                     pergunta_05.Pilha.main(args);
@@ -126,56 +130,5 @@ public class ProvaTecnicaCM {
         System.err.print("Estes são os números do vetor com suas posiçoes atuais: "+ Arrays.toString(vetOrde));
           
     }//fechamento do pergunta 02
-    
-    public static void pergunta_06(){
-       int tamanho = 3;
-       int [][]matriz= new int[3][3];
-       int []aux = new int[3];
-       int i, c,t;
-       
-     
-        
-              
-       
-       //preencher a matriz gerando valores aleatorios
-        System.out.println("Gerado valores aleatorios da matriz.");
-       for(i = 0; i < tamanho; i++ ){
-           for(c = 0; c < tamanho;c++){
-               matriz [i][c] = (int)(Math.random()*10); ;
-           }
-       }
          
-       //imprimir matriz
-       for(i = 0; i < tamanho; i++ ){
-           for(c = 0; c < tamanho;c++){
-               System.out.print(matriz [i][c] + " ");
-           }
-           System.out.println("");
-       }
-       //imprimir diagonal principal e armazenando valores no auxiliar
-        System.out.print("Diagonal Principal: ");
-        for( i=0;i < tamanho; i++){
-            System.out.print(matriz [i][i]+" ");
-            aux[i] = matriz [i][i];
-        }
-        System.out.println("");
-        
-        //imprimir diagonal secundaria
-        System.out.print("Diagonal Secundaria: ");
-        for( i=0;i < tamanho; i++){
-            System.out.print(matriz [i][tamanho -1 -i]+" ");
-            matriz [i][tamanho -1 -i] = aux[tamanho-1-i];
-        }
-        System.out.println("");
-        
-       // for( i=0;i < tamanho; i++){
-      //      matriz [][]
-      //  }
-        
-        
-    }//fechamento do pergunta 06
-    
-    
-    
-        
 }

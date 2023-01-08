@@ -9,12 +9,7 @@ package pergunta_03;
  *
  * @author ivan
  */
-public class Figura {
-    /**
- * @param args
- */
-public static void main(String[] args) {
-	// TODO Auto-generated method stub
-
-}
+public interface Bidimensional {
+	public void calcularPerimetro();
+	public void calcularArea();
 }
