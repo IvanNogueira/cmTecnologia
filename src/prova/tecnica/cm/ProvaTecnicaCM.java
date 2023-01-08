@@ -5,8 +5,10 @@
  */
 package prova.tecnica.cm;
 
+
 import java.util.Arrays;
 import java.util.Scanner;
+import pergunta_05.Pilha;
 
 /**
  *
@@ -21,9 +23,11 @@ public class ProvaTecnicaCM {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         
-        System.out.println("01 - Calcular a moda de um vetor de números inteiros (moda é o elemento que mais se repete). ");
-        System.out.println("02 - Escreva o algoritmo de ordenação de um vetor.");
+        System.out.println("Opção 01 - Calcular a moda de um vetor de números inteiros (moda é o elemento que mais se repete). ");
+        System.out.println("Opção 02 - Escreva o algoritmo de ordenação de um vetor.");
+        System.out.println("Opção 05 -Utilizando somente operações de empilhar e desempilhar, escreva uma função ou trecho de código, que remova um item com valor X da pilha. Ao final da execução da função, a pilha deverá ser igual à original, exceto pela ausência do item removido. ");
         System.out.print("digite a opção deseja:");
+        
         int numero = entrada.nextInt();
 
         switch (numero){
@@ -32,7 +36,12 @@ public class ProvaTecnicaCM {
                 break;
             case 2:
                 pergunta_02();
-                break;    
+                break; 
+            case 3:
+                  
+            case 5:
+                pergunta_05.Pilha.main(args);
+                break; 
             
             default:
             System.out.println("Número escolhido inexistente! Digite um número entre 1 a 7.");
