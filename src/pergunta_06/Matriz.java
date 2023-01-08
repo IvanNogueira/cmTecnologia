@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class Matriz {
     int tamanho;
     int [][]matriz= new int[numero][numero];
+    int [][]matriz2 = new int[3][3];
     int []aux = new int[numero];
     int i, c,t;
     public static int numero;
@@ -34,6 +35,7 @@ public class Matriz {
         matriz.diagonalSecundaria();
         System.out.println(ANSI_RED+"Matriz com elementos da diagonal Principal inverta na diagonal Secundária ");
         matriz.imprimirMatriz();
+        matriz.comparação();
 
 
     }//fechamento do pergunta 06
@@ -48,7 +50,15 @@ public class Matriz {
 
         for(i = 0; i < tamanho; i++ ){
             for(c = 0; c < tamanho;c++){
-                matriz [i][c] = (int)(Math.random()*10); ;
+                matriz [i][c] = (int)(Math.random()*2);
+                
+            }
+        }
+        
+        for(i = 0; i < 3; i++ ){
+            for(c = 0; c < 3;c++){
+                matriz2 [i][c] = (int)(Math.random()*2);
+                
             }
         }
        }
@@ -83,5 +93,18 @@ public class Matriz {
                 matriz [i][tamanho -1 -i] = aux[tamanho-1-i];
             }
             System.out.println("");
+        }
+       
+        public void comparação(){
+            int contador=0;
+            System.out.print("comparação: ");
+           for( i  =  0; i < 3; i++ ){
+	for( c = 0; c < 3;c++){
+		if(matriz [i][c] == matriz2 [i] [c]){
+			contador++;
+		}// if 		
+        }//segundo for			
+}//primeiro for
+            System.out.println("contador: "+contador);
         }
 }
